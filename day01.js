@@ -201,7 +201,7 @@ const input = [
   1876,
 ];
 
-const solve = () => {
+const solveFirstHalf = () => {
   for (let i = 0; i < input.length; i++) {
     for (let j = i + 1; j < input.length; j++) {
       if (input[i] + input[j] === 2020) {
@@ -211,4 +211,18 @@ const solve = () => {
   }
 };
 
-solve();
+console.log("First half: ", solveFirstHalf());
+
+const solveSecondHalf = () => {
+  for (let i = 0; i < input.length; i++) {
+    for (let j = i + 1; j < input.length; j++) {
+      for (let k = j + 1; k < input.length; k++) {
+        if (input[i] + input[j] + input[k] === 2020) {
+          console.log(input[i] * input[j] * input[k]);
+        }
+      }
+    }
+  }
+};
+
+console.log("Second half: ", solveSecondHalf());
