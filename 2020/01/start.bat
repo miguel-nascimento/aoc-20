@@ -1,0 +1,1 @@
+rustc day01.rs && day01.exe
